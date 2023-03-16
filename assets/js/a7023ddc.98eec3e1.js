@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMatchboxscope=self.webpackChunkMatchboxscope||[]).push([[713],{3457:e=>{e.exports=JSON.parse('[{"label":"ESP32-CAM","permalink":"/blog/tags/esp-32-cam","count":1},{"label":"WEB-SERIAL","permalink":"/blog/tags/web-serial","count":1}]')}}]);
