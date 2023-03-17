@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMatchboxscope=self.webpackChunkMatchboxscope||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"Flashing the Firmware","permalink":"/blog/Flashing"}]}')}}]);
