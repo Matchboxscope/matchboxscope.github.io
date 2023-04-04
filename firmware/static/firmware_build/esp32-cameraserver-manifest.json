@@ -1,0 +1,12 @@
+{
+  "name": "ESP32-CamServer",
+  "version": "2023-03-06",
+  "home_assistant_domain": "ESP32-CamServer",
+  "funding_url": "https://github.com/Matchboxscope/Matchboxscope",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [{ "path": "ESP32-CAMServer.bin", "offset": 0 }]
+    }
+  ]
+}
