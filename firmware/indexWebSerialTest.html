@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Matchboxscope Setting Up the Stuff Website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1093.0">
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Project name</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1 class="display-3">Try Matchboxscope online</h1>
+            <p class="lead">This is to use the Web Serial interface to control a ESP device</p>
+            <p><a class="btn btn-lg btn-success" id="openclose_port" role="button">Connect to ESP32</a></p>
+        </div>
+
+        <div id="text-interface">
+          </div>
+                <h4>Setup Wifi</h4>
+                <form>
+                    <label for="ssid">SSID:</label>
+                    <input type="text" id="ssid" name="ssid"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <button onclick="submitForm()">Submit</button>
+                </form>
+            
+                
+                <div>
+                    <span>Baud Rate: </span>
+                    <select id="baud_rate">
+                        <option value="115200">115200</option>
+                        <option value="9600">9600</option>
+                        <option value="19200">19200</option>
+                        <option value="38400">38400</option>
+                        <option value="57600">57600</option>
+                        <option value="2000000">2000000</option>
+                    </select><button id="change" disabled>Change</button>
+                </div>
+                <span id="port_info">Disconnected</span>
+
+                <h4>Serial Terminal X</h4>
+                <div id="outDiv">
+                    <textarea id="term_window" readonly>Hellorld!</textarea>
+                </div>
+                <div id="inDiv">
+                    <textarea id="term_input"></textarea>
+                    <button id="send" disabled>Send</button>
+                    <button id="clear" disabled>Clear</button>
+                </div>
+                
+            </div>
+
+
+        </div>
+
+        <footer class="footer">
+            <p>© openUC2 2023</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <script src="js/script.js"></script>
+
+    <script>
+        function submitForm() {
+            // Get the values of SSID and password from the form
+            var ssid = document.getElementById("ssid").value;
+            var password = document.getElementById("password").value;
+
+            // Call the function with the SSID and password values as arguments
+            sendSSIDAndPassword(ssid, password);
+        }
+
+        async function sendSSIDAndPassword(ssid, password) {
+            // Here you can write code to send the SSID and password to a server or do whatever you want with them
+            console.log("SSID: " + ssid);
+            console.log("Password: " + password);
+
+            const wifiConfig = {
+            ssid: ssid,
+            password: password
+            };
+
+            const wifiConfigJson = JSON.stringify(wifiConfig);
+            console.log(wifiConfigJson);
+            await sendCMD(wifiConfigJson)
+        }
+        </script>
+</html>
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SSID and Password</title>
+</head>
+<body>
+	<h2>Enter SSID and Password:</h2>
+	<form>
+		<label for="ssid">SSID:</label>
+		<input type="text" id="ssid" name="ssid"><br><br>
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password"><br><br>
+		<button onclick="submitForm()">Submit</button>
+	</form>
+
+	<script>
+		function submitForm() {
+			// Get the values of SSID and password from the form
+			var ssid = document.getElementById("ssid").value;
+			var password = document.getElementById("password").value;
+
+			// Call the function with the SSID and password values as arguments
+			sendSSIDAndPassword(ssid, password);
+		}
+
+		function sendSSIDAndPassword(ssid, password) {
+			// Here you can write code to send the SSID and password to a server or do whatever you want with them
+			console.log("SSID: " + ssid);
+			console.log("Password: " + password);
+		}
+	</script>
+</body>
+</html>

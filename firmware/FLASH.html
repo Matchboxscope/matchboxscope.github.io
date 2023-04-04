@@ -150,6 +150,10 @@
           <img src="https://raw.githubusercontent.com/easytarget/esp32-cam-webserver/master/Docs/logo.svg" alt="ESP32 Generic" />
         </label>
         <label>
+          <input type="radio" name="type" value="esp32-cameraserveradvanced" checked />
+          <img src="https://raw.githubusercontent.com/easytarget/esp32-cam-webserver/master/Docs/logo.svg" alt="ESP32 Generic" />
+        </label>
+        <label>
           <input type="radio" name="type" value="esp32-espectrometer" checked />
           <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Spectrum-sRGB.svg" alt="ESP32 Spectrometer" />
         </label>
@@ -189,7 +193,23 @@
         </code>
       </pre>
       </div>
-
+      <div class="hidden info esp32-cameraserveradvanced">
+        <h3>ESP32 Camera Simple Webcam Server Advanced</h3>
+        <p>
+          This flashes the ESP32 Camera Server to the board.
+            <a href="https://github.com/Matchboxscope/matchboxscope-simplecamera"> here.</a>
+            It adds several new features like time-lapse imaging, PWM output, deepsleep, upload-to-github and more.
+            You can add your Wifi Credentials by sending the following json string via USB Serial (a web-based GUI will follow!) {"ssid":"Blynk","password":"12345678"}
+        </p>
+        <h3>Pin Layout</h3>
+        <pre>
+        <code class="language-pascal">
+          // ESP32-Camera
+          const int PIN_DEF_LED = 04;
+          const int PIN_DEF_PWM = 12;
+        </code>
+      </pre>
+      </div>
       <div class="hidden info esp32-espectrometer">
         <h3>ESP32 Camera Simple Webcam Server</h3>
         <p>
