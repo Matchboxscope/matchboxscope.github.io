@@ -4,7 +4,7 @@
         <title>Matchboxscope Documentation Blog</title>
         <link>https://matchboxscope.github.io/blog</link>
         <description>Matchboxscope Documentation Blog</description>
-        <lastBuildDate>Mon, 24 Apr 2023 21:13:19 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Apr 2023 11:41:18 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Flashing the Firmware]]></title>
             <link>https://matchboxscope.github.io/blog/Flashing</link>
             <guid>https://matchboxscope.github.io/blog/Flashing</guid>
-            <pubDate>Mon, 24 Apr 2023 21:13:19 GMT</pubDate>
+            <pubDate>Wed, 26 Apr 2023 11:41:18 GMT</pubDate>
             <description><![CDATA[Here you can flash the firmware for the different hardware versions:]]></description>
             <content:encoded><![CDATA[<p>Here you can flash the firmware for the different hardware versions:</p><p><img loading="lazy" src="/assets/images/firmware-update-1-bc63551328b1746e30a52e67fb04ed55.png" width="512" height="512" class="img_ev3q"></p><p>You can also visit this site: <a href="https://matchboxscope.github.io/firmware/FLASH.html" target="_blank" rel="noopener noreferrer">https://matchboxscope.github.io/firmware/FLASH.html</a> </p><iframe src="https://matchboxscope.github.io/firmware/FLASH.html" width="100%" height="100%"></iframe>]]></content:encoded>
             <category>ESP32-CAM</category>
