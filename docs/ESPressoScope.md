@@ -18,15 +18,6 @@ This device is a work-in-progress instrument. Not everything is perfectly workin
 - make hole round assembly larger in diameter to have moroe support for the threaded inserts?
 - diffuser for the led
 
-
-
-
-
-
-[10:07, 20/05/2023] Vittorio Saggiamo: especially if for layman, they get overwhelmed by a labyrinthic github
-[10:08, 20/05/2023] Vittorio Saggiamo: "That the upper part allows better mobility of the slide" this suggestion make sense
-[10:09, 20/05/2023] Vittorio Saggiamo: and if we dont need the LED periscope, we can have the whole upper part for the slide
-
 ## Flash the firmware
 
 :::warning
@@ -223,6 +214,10 @@ Turn on the light. Take a piece of paper and first try if you can sense any cont
 
 ## Software
 
+### Capturing imates
+
+If you start the stream and hit the Capture button, the image gets stored on the internal SD card (if inserted). For this, please flash it using the official SD card formatting tool: https://www.sdcard.org/downloads/formatter/
+
 ### Browser-based operation
 
 You can connect to the ESP32 using a wifi-enabled device that runs a browser (mostly tested with Chrome). Find the device's IP address (e.g. by observing the Serial output) and enter this address into the browser's address bar. The UI comes in `simple` and `advanced` mode. Open `advanced`. Play around with the settings. You can tweak it to be fully manual, however, the image data will always be JPEG compressed (sorry).
@@ -237,9 +232,12 @@ Similar to the ImageJ.js functionality, the ESP32 can trigger a `git push` of th
 
 The uploaded images get compiled into a JS-based gallery daily, available here: https://matchboxscope.github.io/gallery/matchboxgallery
 
+
 ### Autonomous operation
 
-If a FAT formated SD micro card is inserted, you can record timelapse image series with the previously entered settings. Two modes are available. One, where the network operatibility is still available, the other when it'S in deep-sleep mode (e.g. under water).
+If a FAT formatted SD micro card is inserted, you can record timelapse image series with the previously entered settings. Two modes are available. One, where the network operatibility is still available, the other when it'S in deep-sleep mode (e.g. under water).
+
+**HINT:** Please format the SD card using the official SD card formatter: https://www.sdcard.org/downloads/formatter/
 
 #### Non-deepsleep timelapse
 
