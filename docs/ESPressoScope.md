@@ -1,7 +1,8 @@
-# Matchboxscope (Injection Molding Version)
+# ESPressoscope (Injection Molded Version of the Matchboxscope)
 
-This is a simplified version of the matchboxscope that can be produced using a desktop injection molding machine.
+*A Cup-sized microscope that never sleeps.*
 
+This is the latest version of the base assembly for any ESP32-based microscope.
 
 ## Improvements
 This device is a work-in-progress instrument. Not everything is perfectly working yet. Bare with us. If you find something sneaky, please feel free to file an issue or start a discussion here: https://github.com/matchboxscope/Matchboxscope
@@ -9,12 +10,37 @@ This device is a work-in-progress instrument. Not everything is perfectly workin
 **Known Issues:**
 - Hole for led holder larger
 - Do we really want threaded inserts?
+- Case of ESP32 may be pushing the boot/reset button causing issues while turning on?
+
+**Improvements:**
+- removing threaded inserts saves a hot iron, but removes smooth operation while focussing
+- one of the insert holes is a little off, does not have enough printing material/support
+- make hole round assembly larger in diameter to have moroe support for the threaded inserts?
+- diffuser for the led
 
 
+
+
+
+
+[10:07, 20/05/2023] Vittorio Saggiamo: especially if for layman, they get overwhelmed by a labyrinthic github
+[10:08, 20/05/2023] Vittorio Saggiamo: "That the upper part allows better mobility of the slide" this suggestion make sense
+[10:09, 20/05/2023] Vittorio Saggiamo: and if we dont need the LED periscope, we can have the whole upper part for the slide
 
 ## Flash the firmware
 
+:::warning
+***UPDATE*** We have created a quick video to show every step from connecting the device to displaying the video on screen. Please consider watching the following [**YOUTUBE VIDEO**](https://youtu.be/ji-f1ymRpAs).
+:::
+![https://youtu.be/ji-f1ymRpAs](https://i3.ytimg.com/vi/ji-f1ymRpAs/maxresdefault.jpg)
+
+
+### Step-by-step guide
+
 1. Connect the ESP32-CAM board to the USB and press the ***RESET*** (in the rear of the ESP32-CAM board) and ***BOOT*** (or sometimes ***IO0***) button (on the USB-side). Then first release the ***RESET*** and then the ***BOOT*** button. The device will be in `download mode`
+
+In motion (push RST -> CAM board, push Boot/IO0 Serial board, release RST, release Boot)
+![](IMAGES/injectionmold/VID_20230519_114908.gif)
 
 2. Go to https://matchboxscope.github.io/firmware/FLASH.html and select the `ESP32 Camera Simple Webcam Server Advanced` firmware
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding5.jpg)
@@ -37,22 +63,22 @@ This device is a work-in-progress instrument. Not everything is perfectly workin
 8. The output should look something like this
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding13.jpg)
 
-9. By default the ESP32 will connect to a WIFI hotspot using the following default networks:
+9. By default the ESP32 will connect to a WIFI hotspot using the following default:
 
 ```
 SSID: Blynk
 PW: 12345678
-
-SSID: omniscope
-PW: omniscope
 ```
 
-You can add your own by pasting the following string in the serial monitor
-```
-{"ssid":"youssid","password":"yourpassword"}
-```
+If this is not available, it will create a stand-alone Access Point (AP) to which you would need to connect to with your cellphone/tablet/PC/laptop... The address to reach the device becomes http://192.168.4.1
 
-The firmware is based on this code: https://github.com/Matchboxscope/matchboxscope-simplecamera/tree/matchboxscope
+You can add your own by setting it in the GUI. The following flow-chart gives more insight :
+
+![](IMAGES/injectionmold/flowchartwifi.png)
+
+
+The firmware is based on this code: https://github.com/Matchboxscope/matchboxscope-simplecamera/tree/matchboxscope and now heavily modified.
+
 
 10. finding the ESP in the network may become tricky. You can install the Fing APP (https://play.google.com/store/apps/details?id=com.overlook.android.fing) and scan your local network for its IP. In case you prepared an access point (AP) using Windows, you can spot the IP address in the hotspot  settings.
 
@@ -111,6 +137,17 @@ Possible causes:
 - lower the resolution (e.g. VGA)
 - reflash the firmware
 
+#### Bootloop
+Causes:
+- faulty esp32 camera
+- error while uploading firmware
+- camera broken
+Solutions:
+- reflash the firmware
+- get a new board
+- get a new camera module
+
+
 ## Assembly
 
 These are the parts you need to build a Matchboxscope:
@@ -145,22 +182,22 @@ These are the parts you need to build a Matchboxscope:
 **HINT/Warning:** Be careful while removing the lens. The flex cable is sensitive to tension. It may be easier to first remove the camera module using the snap-bar mechanism and then later add it again.
 ![](IMAGES/injectionmold/VID_20230504_104920.gif)
 
-4. Add the lens to the holder and remove the sticky tape (**Note**: This part looks a little different now since the screw has to move closoer to the base board)
-![](IMAGES/injectionmold/matchboxscope_injectionmolding11.jpg)
+4. Add the lens to the holder and remove the sticky tape (**Note**: This part looks a little different now since the screw has to move closer to the base board); **Hint:** The distance between the camera lens and the sensor determines the magnification, the further out the lens lurkes, the higher the magnification. You can tune it freely. **Hint :** Remove any sticker that may remain on the camera lens.
+![](IMAGES/injectionmold/IMG_20230519_122130.jpg)
 
-**HINT:**
+**HINT:** In Motion:
 ![](IMAGES/injectionmold/VID_20230504_105826.gif)
 
-5. Fix the lens on the base using M3x6mm screws (**Note**: The screws should not touch the PCB later when everything is fully assembled!)
+5. Fix the lens on the base using M3x6mm screws (**Note**: The screws should not touch the PCB later when everything is fully assembled! Therefore, please use short screws. )
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding12.jpg)
 
-6. Add the camera holder to the board and fix the camera in place (**Hint**: If the Camera is not holding properly, you could use blutek or double sided sticky tape to fix it temporally. **WARNING:** be careful with the flex-pcb (copper one) since this easily breaks if not handled with care)
+6. Add the camera holder to the board and fix the camera in place (**Hint**: If the Camera is not holding properly, you could use blutek or double sided sticky tape to fix it temporally. **WARNING:** be careful with the flex-pcb (copper one) since this easily breaks if not handled with care); Make sure the flatband cable is oriented correctly and the camera sensor (round, shingy side) points to the SD card slot as indicated in the image below. Make sure you have a good mechanical connection between the flat-band cable and the snap-bar-like mechanism of the ESP-CAM board. Carefuly pull the connection and see if it won't go off.
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding14.jpg)
 
 7. Add the ESP32 board to the base so that the camera tube fits into the hole in the base
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding15.jpg)
 
-8. Close the base with the lid from below using M3x12mm screws (not using too long screws)
+8. Close the base with the lid from below using M3x12mm screws (not using too long screws); **HINT:** Make sure the lid(s) are oriented such that the screw holes are pointing outwards as indicated in the image below:
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding16.jpg)
 
 9. Add the springs to the screws and mount the sample plate using M3x24mm screws;  Add the lamp holder using the M3x12 screw.

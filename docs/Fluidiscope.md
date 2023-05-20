@@ -45,6 +45,9 @@ All design files can be found in the release from the [Matchboxscope Releases](h
 
 All 3D-printable files can be found [here](./STL/Anglerfish_JAR):
 
+## CAD Files
+
+The release files can be found https://github.com/Matchboxscope/Matchboxscope/releases/download/ESPMicroscopeCollectionv2/CAD_PlanktoscopeMini.zip
 
 ## Assembly Process
 
