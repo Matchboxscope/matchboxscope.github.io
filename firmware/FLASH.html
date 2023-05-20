@@ -142,16 +142,12 @@
 
       <div class="radios">
         <label>
-          <input type="radio" name="type" value="esp32-matchboxscope" checked />
-          <img src="static/screenshots/render1.png" alt="ESP32 Generic" />
-        </label>
-        <label>
           <input type="radio" name="type" value="esp32-cameraserver" checked />
           <img src="https://raw.githubusercontent.com/easytarget/esp32-cam-webserver/master/Docs/logo.svg" alt="ESP32 Generic" />
         </label>
         <label>
           <input type="radio" name="type" value="esp32-cameraserveradvanced" checked />
-          <img src="https://raw.githubusercontent.com/easytarget/esp32-cam-webserver/master/Docs/logo.svg" alt="ESP32 Generic" />
+          <img src="static/screenshots/render1.png" alt="ESP32 Generic" />
         </label>
         <label>
           <input type="radio" name="type" value="xiao-sense-manifest" checked />
@@ -166,22 +162,6 @@
       <p class="button-row" align="center">
         <esp-web-install-button></esp-web-install-button>
       </p>
-      <div class="hidden info esp32-matchboxscope">
-        <h3>ESP32 Camera board for ther matchboxscope</h3>
-        <p>
-          This is a ESP32 based board for the matchboxscope.
-          More information can be found  <a href="https://github.com/Matchboxscope/Matchboxscope/blob/master/Matchboxscope.md"> here.</a>
-        </p>
-
-        <h3>Pin Layout</h3>
-        <pre>
-        <code class="language-pascal">
-          // ESP32-Camera
-          const int PIN_DEF_LENS = 16;
-          const int PIN_DEF_LED = 04;
-        </code>
-      </pre>
-      </div>
       <div class="hidden info esp32-cameraserver">
         <h3>ESP32 Camera Simple Webcam Server</h3>
         <p>
@@ -381,4 +361,3 @@ void grabImage() {
     </script>
   </body>
 </html>
-  
