@@ -4,8 +4,8 @@
 
 <title>
 
-Image Processing with PyScript  
-    
+Image Processing with PyScript
+
 </title>
 
 <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
@@ -29,7 +29,7 @@ Image Processing with PyScript
       border-radius: 4px;
       box-sizing: border-box;
     }
-    
+
     input[type=submit] {
       width: 100%;
       background-color: #4c4faf;
@@ -40,11 +40,11 @@ Image Processing with PyScript
       border-radius: 4px;
       cursor: pointer;
     }
-    
+
     input[type=submit]:hover {
       background-color: #45a049;
     }
-    
+
     p {
       border-radius: 5px;
       background-color: #f2f2f2;
@@ -57,19 +57,19 @@ Image Processing with PyScript
     <form onsubmit="return false">
         <label for="name">Image URL:</label><br>
         <input type="text" id="imageurl" name="imageurl" value="https://cataas.com/cat"><br>
-        
+
         <label for="label action option">Select a image processing option:</label><br>
         <select name="img_proc_op" id="img_proc_op">
             <option value="grayscale">grayscale</option>
             <option value="edge_detection">edge_detection</option>
-            <option value="image_binarization">image_binarization</option>
+            <option value="image_holo">image_holo</option>
         </select>
 
         <input pys-onClick="sub" type="submit" id="btn-form" value="submit">
 
 
-    </form> 
- 
+    </form>
+
     <div id="textfield">Processed Image</div>
     <div id="pyplotdiv"><img id="pyplotfigure"/></div>
     <py-script>
@@ -85,7 +85,7 @@ Image Processing with PyScript
 
         def rgb2gray(rgb):
           return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
-          
+
         def reconstruct_inline_hologram(hologram, wavelength, ps, distance):
 
         # Inverse space
@@ -94,29 +94,29 @@ Image Processing with PyScript
              fx = np.linspace(-(Nx-1)/2*(1/(Nx*ps)), (Nx-1)/2*(1/(ps*Nx)), Nx)
              fy = np.linspace(-(Ny-1)/2*(1/(ps*Ny)), (Ny-1)/2*(1/(ps*Ny)), Ny)
              Fx, Fy = np.meshgrid(fx, fy)
-             
+
              kernel = np.exp(1j*(2 * np.pi / wavelength) * distance) * np.exp(1j * np.pi * wavelength * distance * (Fx**2 + Fy**2))
 
              # Compute FFT centered about 0
-             E0fft = np.fft.fftshift(np.fft.fft2(hologram)) 
-             
+             E0fft = np.fft.fftshift(np.fft.fft2(hologram))
+
              # Multiply spectrum with fresnel phase-factor
              G = kernel*E0fft
              Ef = np.fft.ifft2(np.fft.ifftshift(G))
 
-             
+
              return np.abs(Ef)
-   
+
         def convert_binary(image_matrix, thresh_val):
             #Source https://medium.com/analytics-vidhya/binarization-of-image-using-numpy-65df2b82e189
             white = 255
             black = 0
-            
+
             initial_conv = np.where((image_matrix <= thresh_val), image_matrix, white)
             final_conv = np.where((initial_conv > thresh_val), initial_conv, black)
-            
+
             return final_conv
-         
+
 
         def edge_detection(img):
             img = img[:, :, 0]
@@ -148,19 +148,15 @@ Image Processing with PyScript
              plt.axis('off')
              plt.imshow(img,cmap='gray')
 
-            elif image_process_action=='image_binarization':
-            
+            elif image_process_action=='image_holo':
+
              img=reconstruct_inline_hologram(img[:,:,2], wavelength=450e-9, ps=5e-6 , distance=.007)
-             img=convert_binary(img,127)
              plt.axis('off')
              plt.imshow(img,cmap='gray')
             else:
              img=img
              plt.axis('off')
              plt.imshow(img)
-            
-
-            
 
             buf = io.BytesIO()
             plt.savefig(buf, format='png')
@@ -168,7 +164,7 @@ Image Processing with PyScript
             img_str = 'data:image/png;base64,' + base64.b64encode(buf.read()).decode('UTF-8')
             pfig = document.getElementById("pyplotfigure")
             pfig.setAttribute("src",img_str)
-    
+
     </py-script>
 
 </body>
