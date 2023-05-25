@@ -2,10 +2,10 @@
   "name": "ESP32s3-XiaoSense",
   "version": "2023-04-26",
   "home_assistant_domain": "Xiao Sense",
-  "funding_url": "https://github.com/Matchboxscope/Matchboxscope",
+  "new_install_skip_erase": false,
   "builds": [
     {
-      "chipFamily": "Esp32",
+      "chipFamily": "ESP32-S3",
       "parts": [{ "path": "xiao-sense-manifest.bin", "offset": 0 }]
     }
   ]
