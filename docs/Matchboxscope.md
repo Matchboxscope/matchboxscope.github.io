@@ -1,7 +1,11 @@
-# Matchboxscope (!Outdated Warning!)
+# Matchboxscope (Older simpler version)
 
 :::warning
 ***UPDATE*** Even though the classic Matchboxscope is still working, we recommend you to have a loot at the updated and more comprehensive documentation under [Matchboxscope Injection Molded Version](../Matchboxscope_IM.md). Thanks!
+:::
+
+:::warning
+***QuickStart*** The current CAD files can conveniently be downloaded from Printables: https://www.printables.com/model/412753-esp32-microscope-matchboxscope
 :::
 
 
@@ -19,7 +23,13 @@ The Matchboxscope needs some 5V juice from USB and can work using a power bank. 
 
 ## CAD Files
 
-The release files can be found https://github.com/Matchboxscope/Matchboxscope/releases/download/ESPMicroscopeCollectionv2/CAD_Matchboxscope.zip
+The release files can be found here:
+https://www.printables.com/model/412753-esp32-microscope-matchboxscope
+
+
+or another Inventor-based version here: https://github.com/Matchboxscope/Matchboxscope/releases/download/ESPMicroscopeCollectionv2/CAD_Matchboxscope.zip
+
+
 
 
 ## Z Stage
