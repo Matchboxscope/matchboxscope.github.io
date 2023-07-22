@@ -11,9 +11,11 @@ Our experience so far is: Awesome! No more glitches, reboots or weird behaviours
 Some images that describe how the XIAO adapts to the ESP32-CAM formfactor
 
 There is a small dummy SD-card so that the XIAO remains in place. If you use a micro-SD card you won't need this addon:
+
 ![](./IMAGES/seeed/seeedconnected.png)
 
 The camera goes in the same place as the bigger predecor:
+
 ![](./IMAGES/seeed/IMG_20230705_084950.jpg)
 
 The whole assembly is fixed with 4 M3x12mm screws (or something similar), make sure the Wifi antenna is placed at some place that vertical to the XIAO's operation. Check before assembling everything. Sometimes the wifi signal becomes weak.
