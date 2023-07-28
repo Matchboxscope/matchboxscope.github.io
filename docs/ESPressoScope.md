@@ -18,6 +18,11 @@ This device is a work-in-progress instrument. Not everything is perfectly workin
 - make hole round assembly larger in diameter to have moroe support for the threaded inserts?
 - diffuser for the led
 
+:::info
+The newest **3D Printing files** can be found in the ESPressoscope release here:
+https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2
+:::
+
 ## Flash the firmware
 
 :::warning
@@ -249,6 +254,12 @@ To enter this setting, you have to move the slider for Anglerfishmode all the wa
 
 
 
+## Imaging Results
+
+*HeLa cells in an incubator while they are dying (sad but true)*
+![](IMAGES/matchboxscope/ResultofSDkeptstack.gif)
+
+![](IMAGES/matchboxscope/2023_06_23-HeLa_Timelapse-1.mpg)
 
 ## Showcase
 

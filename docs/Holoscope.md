@@ -73,3 +73,7 @@ for iz in np.linspace(1,10,50):
     plt.savefig("ecoliDefocusEsp32"+str(iz)+".png")
     plt.show()
 ```
+
+## Reults
+
+![](IMAGES/holoscope/ESP32_HoloReconstruction.gif)
