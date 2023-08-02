@@ -150,17 +150,24 @@ These are the parts you need to build a Matchboxscope:
 
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding2.jpg)
 
-- ESP32-Camera board + USB Serial adapter
-- 2x Lid/bottom (printed)
-- 2x Base (printed)
-- 1x camera holder (printed)
-- 1x lamp holder (printed)
-- 1x lens holder (printed)
-- 1x led lamp
-- 3x Springs
-- 8x M3x20 Cylindrical Headed Screws (DIN912, 2x M3x6mm, 4x M3x12mm, 3x M3x24mm)
-- 6x M3 threaded inserts (4x6mm)
-- 1x USB micro cable
+
+
+| Name                                       | Description                           | Amount | Price (USD) | URL                                                                                              |
+|--------------------------------------------|---------------------------------------|--------|-------------|--------------------------------------------------------------------------------------------------|
+| ESP32-Camera board + USB Serial adapter    | ESP32 Camera Board with USB Serial    | 1      | $20         | [Link](https://www.amazon.de/ESP32-CAM-MB-Kameramodul-Bluetooth-Entwicklungsplatine-serielle-automatischer-1-St%C3%BCck/dp/B0BW8R64G2/ref=asc_df_B0BW8R64G2/?tag=googshopde-21&linkCode=df0&hvadid=650906361097&hvpos=&hvnetw=g&hvrand=1218942929036455298&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-2022052345436&psc=1&th=1&psc=1&gclid=CjwKCAjw_aemBhBLEiwAT98FMqvqt9tAKJwjN-7spPI5fVI1voVxfh5AhyYn2LXKl_vBqAfgKlxVlBoCHo8QAvD_BwE)                                                                  |
+| Lid/bottom (printed)                       | 3D Printed Lid/bottom                 | 2      | $2 (each)   | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
+| Base (printed)                             | 3D Printed Base                       | 2      | $2 (each)   | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
+| Camera holder (printed)                    | 3D Printed Camera holder              | 1      | $3          | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
+| Lamp holder (printed)                      | 3D Printed Lamp holder                | 1      | $2          | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
+| Lens holder (printed)                      | 3D Printed Lens holder                | 1      | $2          | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
+| LED Lamp                                   | LIHAO Mini LED Lamp (Waterproof)      | 1      | $5          | [Link](https://www.amazon.nl/LIHAO-mini-ledlampjes-lantaarns-batterijen-waterdicht/dp/B01FF07XFE) |
+| Springs                                    | Pack of 3 Springs                     | 3      | $1 (pack)   | [Link](https://www.amazon.de/Druckfedern-Sortiment-Spirale-Druckfeder-Stahlfeder/dp/B079N7BMS3/ref=asc_df_B079N7BMS3/?tag=googshopde-21&linkCode=df0&hvadid=228048441988&hvpos=&hvnetw=g&hvrand=1914160452934365838&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-420561922299&psc=1&th=1&psc=1)                                                                  |
+| M3x20 Cylindrical Headed Screws (DIN912)   | Pack of 8 M3x20 Screws                | 8      | $0.5 (pack) | [Link](https://www.amazon.de/Zylinderschrauben-Innensechskantschl%C3%BCsseln-Sechskantschraube-Sechskopf-Knopf-Aufbewahrungsbox/dp/B09ZPK9TYS/ref=asc_df_B09ZPK9TYS/?tag=googshopde-21&linkCode=df0&hvadid=604016468616&hvpos=&hvnetw=g&hvrand=15643686379972952873&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-1700799556789&psc=1&th=1&psc=1)                                                                  |
+| M3x6mm Screws (DIN912)                     | Pack of 2 M3x6mm Screws               | 2      | $0.2 (pack) | [Link](https://www.amazon.de/Zylinderschrauben-Innensechskantschl%C3%BCsseln-Sechskantschraube-Sechskopf-Knopf-Aufbewahrungsbox/dp/B09ZPK9TYS/ref=asc_df_B09ZPK9TYS/?tag=googshopde-21&linkCode=df0&hvadid=604016468616&hvpos=&hvnetw=g&hvrand=15643686379972952873&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-1700799556789&psc=1&th=1&psc=1)                                                                  |
+| M3x12mm Screws (DIN912)                    | Pack of 4 M3x12mm Screws              | 4      | $0.3 (pack) | [Link](https://www.amazon.de/Zylinderschrauben-Innensechskantschl%C3%BCsseln-Sechskantschraube-Sechskopf-Knopf-Aufbewahrungsbox/dp/B09ZPK9TYS/ref=asc_df_B09ZPK9TYS/?tag=googshopde-21&linkCode=df0&hvadid=604016468616&hvpos=&hvnetw=g&hvrand=15643686379972952873&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-1700799556789&psc=1&th=1&psc=1)                                                                  |
+| M3x24mm Screws (DIN912)                    | Pack of 3 M3x24mm Screws              | 3      | $0.4 (pack) | [Link](https://www.amazon.de/Zylinderschrauben-Innensechskantschl%C3%BCsseln-Sechskantschraube-Sechskopf-Knopf-Aufbewahrungsbox/dp/B09ZPK9TYS/ref=asc_df_B09ZPK9TYS/?tag=googshopde-21&linkCode=df0&hvadid=604016468616&hvpos=&hvnetw=g&hvrand=15643686379972952873&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-1700799556789&psc=1&th=1&psc=1)                                                                  |
+| M3 threaded inserts (4x6mm)                | Pack of 6 M3 Threaded Inserts         | 6      | $1 (pack)   | [Link](https://www.amazon.de/-/en/Threaded-Bushings-Internal-Ultrasonic-Printers/dp/B0BFV5PXFY/ref=sr_1_5?crid=SQJMDVXKZ5EN&keywords=threaded+insert&qid=1690971183&s=industrial&sprefix=threaded+insert+%2Cindustrial%2C75&sr=1-5)                                                                  |
+| USB micro cable                            | USB Micro Cable                       | 1      | $5          | [Link](https://www.amazon.de/Amazon-Basics-USB-C-USB-IF-Certified-black/dp/B085SBKFJR/ref=sr_1_1_ffob_sspa?crid=J2LWNNBLS3X6&keywords=usb+micro&qid=1690971197&s=industrial&sprefix=usb+micro%2Cindustrial%2C86&sr=1-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1)                                                                  |
 
 :::warning
 ***WARNING:*** It is advisable to have the USB cable disconnected from the camera board. This way the USB connector won't rip off the PCB and you won't induce any electro static discharges which may ultimatively destroy the board
