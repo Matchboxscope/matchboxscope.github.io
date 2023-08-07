@@ -19,6 +19,12 @@ The **Anglerfish** shares many aspects with the **Matchboxscope**, hence it may 
 
 ![https://img.youtube.com/vi/XuOOWYZesqA/mqdefault.jpg ](https://img.youtube.com/vi/XuOOWYZesqA/maxresdefault.jpg)
 
+## Anglerfish APP
+
+- There is a new app that can be used with the anglerfish/espressoscpe
+
+https://github.com/Matchboxscope/Anglerfish-APP
+
 ## CAD Files
 
 The release files can be found https://github.com/Matchboxscope/Matchboxscope/releases/download/ESPMicroscopeCollectionv2/CAD_Anglerfish.zip
