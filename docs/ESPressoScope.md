@@ -26,7 +26,7 @@ https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2
 
 ## Flash the firmware
 
-Please visit the following explanation ![Firmware](Firmware.md)
+Please visit the following explanation [Firmware](Firmware.md)
 
 
 ## Assembly
