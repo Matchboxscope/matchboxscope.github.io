@@ -1,4 +1,4 @@
-# ESP32 CAM based on the SEEED Studio Xiao Sense
+# ESP32 CAM based on the SEEED Studio Xiao Sense (UC2-fueld)
 
 We all like the ESP32-CAM because it is dead-cheap. However, this comes with a huge drawback: The quality of these devices is variable, also it was said that the power management of this device is not ideal due to some groundplane mismatch. The good thing: there are alternatives.
 Recently, Seeed Studio presented the new XIAO Sense series. It's the same camera (OV2650), but with a more powerful ESP32S3 and a much smaller footprint. To have a quick fix, we create an adapter that encapsulates the XIAO into the ESP32-CAM (AI Tinker) formfactor. You can use the same software, but have to flash the **XIAO** version from the flashing webpage. Everything else, remains the same.
@@ -39,6 +39,8 @@ All files as a [ZIP](./IMAGES/seeed/Archiv.zip)
 You can also build you **ANGLERFISH** using cubes. Please head over to the openUC2 repository for having a look at the dedicated Module.
 
 The [OpenUC2 Repo](https://github.com/openUC2/openUC2-SEEED-XIAO-Camera)
+
+We are setting up the documentation on the openuc2 website, too: https://openuc2.github.io/docs/Core/Automation/seeedmicroscope
 
 ![](./IMAGES/seeed/IMG_20230718_131610.jpg)
 
