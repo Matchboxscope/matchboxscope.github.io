@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMatchboxscope=self.webpackChunkMatchboxscope||[]).push([[8842],{4690:e=>{e.exports=JSON.parse('{"label":"Wired","permalink":"/blog/tags/wired","allTagsPath":"/blog/tags","count":1}')}}]);
