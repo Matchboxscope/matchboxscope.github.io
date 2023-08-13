@@ -4,7 +4,7 @@
         <title>Matchboxscope Documentation Blog</title>
         <link>https://matchboxscope.github.io/blog</link>
         <description>Matchboxscope Documentation Blog</description>
-        <lastBuildDate>Sat, 12 Aug 2023 22:16:29 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 13 Aug 2023 06:01:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,9 +12,9 @@
             <title><![CDATA[Using the ESP32 Camera in the Browser]]></title>
             <link>https://matchboxscope.github.io/blog/SerialCamera</link>
             <guid>https://matchboxscope.github.io/blog/SerialCamera</guid>
-            <pubDate>Sat, 12 Aug 2023 22:16:29 GMT</pubDate>
+            <pubDate>Sun, 13 Aug 2023 06:01:45 GMT</pubDate>
             <description><![CDATA[Here you can use the ESP32 camera in the browser]]></description>
-            <content:encoded><![CDATA[<p>Here you can use the ESP32 camera in the browser</p><iframe src="https://matchboxscope.github.io/serialcamera/index.html" width="100%" height="100%"></iframe>]]></content:encoded>
+            <content:encoded><![CDATA[<p>Here you can use the ESP32 camera in the browser</p><iframe src="https://matchboxscope.github.io/cameraserial/index.html" width="100%" height="100%"></iframe>]]></content:encoded>
             <category>ESP32-CAM</category>
             <category>WEB-SERIAL</category>
             <category>Wired</category>
@@ -23,7 +23,7 @@
             <title><![CDATA[Flashing the Firmware]]></title>
             <link>https://matchboxscope.github.io/blog/Flashing</link>
             <guid>https://matchboxscope.github.io/blog/Flashing</guid>
-            <pubDate>Sat, 12 Aug 2023 22:16:29 GMT</pubDate>
+            <pubDate>Sun, 13 Aug 2023 06:01:45 GMT</pubDate>
             <description><![CDATA[Here you can flash the firmware for the different hardware versions:]]></description>
             <content:encoded><![CDATA[<p>Here you can flash the firmware for the different hardware versions:</p><p><img loading="lazy" src="/assets/images/firmware-update-1-bc63551328b1746e30a52e67fb04ed55.png" width="512" height="512" class="img_ev3q"></p><p>You can also visit this site: <a href="https://matchboxscope.github.io/firmware/FLASH.html" target="_blank" rel="noopener noreferrer">https://matchboxscope.github.io/firmware/FLASH.html</a></p><iframe src="https://matchboxscope.github.io/firmware/FLASH.html" width="100%" height="100%"></iframe><iframe src="http://localhost:3000/scripts/index.html" width="100%" height="100%"></iframe>]]></content:encoded>
             <category>ESP32-CAM</category>
