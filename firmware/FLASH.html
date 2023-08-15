@@ -157,6 +157,10 @@
           <input type="radio" name="type" value="esp32-espectrometer" checked />
           <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Spectrum-sRGB.svg" alt="ESP32 Spectrometer" />
         </label>
+        <label>
+          <input type="radio" name="type" value="esp32-serialcamera" checked />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Spectrum-sRGB.svg" alt="ESP32 Serial Camera" />
+        </label>
       </div>
 
       <p class="button-row" align="center">
@@ -211,6 +215,15 @@
         </code>
       </pre>
       </div>
+      <div class="hidden info esp32-serialcamera">
+        <h3>Serial Camera Interface for XIAO Sense</h3>
+        <p>
+          This flashes a simple firmware to the Xiao Sense ESP32S3 camera that can get diplayed using USB Serial in the browser
+          The firmware can be found <a href="https://github.com/Matchboxscope/matchboxscope-simplecamera/tree/rawframereadout"> here.</a>
+            The sample website can be found <h href="https://matchboxscope.github.io/cameraserial/index.html"> here.
+        </p>
+      </div>
+
       <div class="hidden info esp32-espectrometer">
         <h3>ESP32 Camera Simple Webcam Server</h3>
         <p>
