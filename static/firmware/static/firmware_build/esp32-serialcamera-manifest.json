@@ -6,7 +6,7 @@
   "builds": [
     {
       "chipFamily": "ESP32-S3",
-      "parts": [{ "path": "xiao-sense-manifest.bin", "offset": 0 }]
+      "parts": [{ "path": "esp32serialcamera.bin", "offset": 0 }]
     }
   ]
 }
