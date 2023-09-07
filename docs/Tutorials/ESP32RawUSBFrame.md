@@ -9,24 +9,42 @@ The ESP32 camera module is a versatile piece of hardware that offers both wirele
 
 This tutorial will guide you through the process of setting up your ESP32 camera to capture and send RAW frames via USB Serial to a Python application running on a PC.
 
+Alternatively, you can also readout the frames using the HTTP Interface. This is much faster and can more pixel throughput / resolution!
+
+
 ## Prerequisites
 
 ### Hardware:
 - ESP32 camera module (Tested with Seeed Studio XIAO Sense with the OV2640 camera)
 - PC with a USB port
+- USB-C Datacable
 
 ### Software:
-- [Platform.io](https://platformio.org/install/cli) or [Arduino IDE](https://www.arduino.cc/en/software)
-- Python with packages: numpy, pyserial, and cv2. You can install them using:
+- *Optional:* [Platform.io](https://platformio.org/install/cli) or [Arduino IDE](https://www.arduino.cc/en/software)
+- Python (e.g. Anaconda) with packages: numpy, pyserial, and cv2. You can install them using:
   ```bash
   pip install numpy pyserial opencv-python
   ```
 
 ## ESP32 Setup
 
+:::Danger
+The following steps are only necessary if you want to modify and flash the firmware on your own. It's written in the Platform.io framework
+:::
+
+### Quickstart
+
+The Video will tell you everything you need to know:
+1. Flash the right firmware** by visiting : https://matchboxscope.github.io/firmware/FLASH.html
+2. Test the stream by visiting: https://matchboxscope.github.io/cameraserial/index.html
+3. Start the Python script to visualize images: (https://github.com/Matchboxscope/matchboxscope-simplecamera/blob/rawframereadout/PYTHON/ESP32SerialCamGrayBytebuffer.py
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/592SDxEyxdU?si=kNMDUms400jGiBXH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 ### Step 1: Clone the Repository
 
-Clone the code from the [repository](https://github.com/Matchboxscope/matchboxscope-simplecamera/blob/rawframereadout/main/main.ino).
+Clone the code (folders, subfolders) from the [repository](https://github.com/Matchboxscope/matchboxscope-simplecamera/blob/rawframereadout/main/main.ino).
 
 ### Step 2: Flashing the Code
 
@@ -61,7 +79,7 @@ getting frame: \n
 restarting: r0\n */
 ```
 
-- In a previous version we had problems with frame synchronizsation, therefore we manipulated the frame buffer to eventually detect the offset. Therfore the frame-grabber function looks like this:
+- In a previous version we had problems with frame synchronizsation, therefore we manipulated the frame buffer to eventually detect the offset. A pattern of alternating 0,1 is added to the first 10 pixels. Therefore the frame-grabber function looks like this:
 
 ```cpp
 void grabImage()
