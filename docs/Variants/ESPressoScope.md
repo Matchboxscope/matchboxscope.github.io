@@ -88,12 +88,33 @@ These are the parts you need to build a Matchboxscope:
 8. Close the base with the lid from below using M3x12mm screws (not using too long screws); **HINT:** Make sure the lid(s) are oriented such that the screw holes are pointing outwards as indicated in the image below:
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding16.jpg)
 
+### Variation: Seeed Studio Xiao Camera
+
+Instead of the ESP32-CAM, we can also use the newer ESP32-S3-based camera from Seeed Studio. It's a lot smaller and more powerful. But beware: It gets hot! Plastic may start melting. For this board, choose the XIAO firmware in the flashing process.
+
+These are the parts needed; You can retrieve them from here:
+https://github.com/Matchboxscope/Matchboxscope/releases/tag/XIAOSeeedStudioV1
+![](IMAGES/injectionmold/xiaovariation.jpeg)
+
+*Steps to reproduce*
+
+1. Prepare the Case by adding the threaded inserts using the hot iron
+
+![](IMAGES/injectionmold/seeedvariation_3.jpg)
+
+2. Add the Xiao to the base after removing the lens from the camera. Make sure the camera is parallel to the surface; An SD card (dummy) may help
+
+![](IMAGES/injectionmold/seeedvariation_1.jpg)
+
+3. Add the lid and short M3 screws to close it. Done. 
+![](IMAGES/injectionmold/seeedvariation_4.jpg)
+
+
 9. Add the springs to the screws and mount the sample plate using M3x24mm screws;  Add the lamp holder using the M3x12 screw.
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding17.jpg)
 
 **HINT:** This is a bit tricky. Start with one screw+spring combination, fix it and continue with all others. In motion:
 ![](IMAGES/injectionmold/VID_20230504_111346.gif)
-
 
 10. Add the lamp - done!
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding18.jpg)
