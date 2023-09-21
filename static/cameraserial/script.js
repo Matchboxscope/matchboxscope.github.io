@@ -1,8 +1,23 @@
+
+let exposureTime = -1; // Initialize a global variable for the exposure time
+let gain = -1; // Initialize a global variable for the exposure time
+
+function updateExposureTime(value) {
+    exposureTime = value;
+    console.log("Updated exposure time:", exposureTime);
+}
+
 function calculateBase64Length(width, height) {
     const numBytes = width * height;
     let base64Length = Math.ceil((numBytes * 4) / 3);
     base64Length = base64Length + (4 - base64Length % 4) % 4;
     return base64Length +2;
+}
+
+
+function updateGain(value) {
+    console.log("Updated exposure time:", value);
+    gain = value;
 }
 
 function pixelsToPng(pixelData, width, height) {
@@ -148,6 +163,16 @@ document.getElementById('connectButton').addEventListener('click', async () => {
 
         while (true) {
             try {
+                if(exposureTime != -1) {
+                    await writer.write(new TextEncoder().encode(`t${exposureTime}\n`));
+                    await new Promise(resolve => setTimeout(resolve, 50));
+                    exposureTime = -1;
+                }
+                if(gain != -1) {
+                    await writer.write(new TextEncoder().encode(`g${gain}\n`));
+                    await new Promise(resolve => setTimeout(resolve, 50));
+                    gain = -1;
+                }
                 await writer.write(new TextEncoder().encode(' \n'));
                 await new Promise(resolve => setTimeout(resolve, 50));
 
