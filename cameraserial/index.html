@@ -18,6 +18,14 @@
     <div class="row justify-content-center">
         <div class="col-md-8 text-center">
             <button id="connectButton" class="btn btn-primary mb-3">Connect to Camera</button>
+            <div class="mb-3">
+                <label for="exposureTime" class="form-label">Exposure Time</label>
+                <input type="range" class="form-range" id="exposureTime" min="0" max="1200" step="10" oninput="updateExposureTime(this.value)">
+            </div>            
+            <div class="mb-3">
+                <label for="gain" class="form-label">Gain</label>
+                <input type="range" class="form-range" id="gain" min="0" max="20" step="1" oninput="updateGain(this.value)">
+            </div>            
             <div class="img-container">
                 <img id="serialImage" alt="Image from Serial Device" class="img-fluid rounded" />
             </div>
