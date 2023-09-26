@@ -11,7 +11,6 @@ More coming soon.
 ![](IMAGES/espectrometer/espectrometer_3.gif)
 ![](IMAGES/espectrometer/espectrometer_4.gif)
 ![](IMAGES/espectrometer/espectrometer_5.gif)
-![](IMAGES/espectrometer/espectrometer_6.png)
 ![](IMAGES/espectrometer/IMG_20220330_085608.jpg)
 ![](IMAGES/espectrometer/IMG_20220330_085640.jpg)
 ![](IMAGES/espectrometer/IMG_20220330_085707.jpg)
