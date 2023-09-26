@@ -37,7 +37,7 @@ More coming soon.
 ![](IMAGES/espectrometer/Bootstrap 4 Template with Sidebar Menu - Google Chrome 2023-03-05 11-39-54.mp4)
 ![](IMAGES/espectrometer/Spectroscope_v0.png)
 
-
+![](IMAGES/espectrometer/ESPectrometer_lineplot.png)
 ## CAD Files
 
 The release files can be found https://github.com/Matchboxscope/Matchboxscope/releases/download/ESPMicroscopeCollectionv2/CAD_ESPECTROMETER.zip
