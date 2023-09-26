@@ -6,7 +6,6 @@ More coming soon.
 
 # Assembly of the spectrometer
 
-![](IMAGES/espectrometer/IMG_20220330_090104.jpg)
 ![](IMAGES/espectrometer/espectrometer_1.png)
 ![](IMAGES/espectrometer/espectrometer_2.png)
 ![](IMAGES/espectrometer/espectrometer_3.gif)
@@ -34,7 +33,8 @@ More coming soon.
 ![](IMAGES/espectrometer/IMG_20230305_112935.jpg)
 ![](IMAGES/espectrometer/IMG_20230305_114140.jpg)
 ![](IMAGES/espectrometer/Screenshot_20230305_090812_com.android.keyguard.jpg)
-![](IMAGES/espectrometer/Bootstrap 4 Template with Sidebar Menu - Google Chrome 2023-03-05 11-39-54.mp4)
+
+![](IMAGES/espectrometer/2023-03-0511-39-54.mp4)
 ![](IMAGES/espectrometer/Spectroscope_v0.png)
 
 ![](IMAGES/espectrometer/ESPectrometer_lineplot.png)
