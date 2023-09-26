@@ -100,6 +100,83 @@ You can try it out yourself
 
 For a more advanced interface and multi-camera setup, refer to the [Omniscope project](https://github.com/Matchboxscope/omniscope-viewer).
 
+
+#### More theory on Accessing ESP32 Camera Frames Using Python and REST API
+
+This is a bit more explanation on how you can access the frames
+
+1. **Setup the Environment**:
+
+    First, ensure you've set up your Python environment and installed the required libraries:
+
+    ```bash
+    pip install requests opencv-python numpy
+    ```
+
+2. **Sending an HTTP Request to Retrieve a Frame**:
+
+    The ESP32 camera, when set up as an HTTP server, can provide frames as JPEG images in response to specific requests. One common endpoint might be `/capture`, which returns a single JPEG frame.
+
+    ```python
+    import requests
+    import cv2
+    import numpy as np
+
+    # Define the camera's API endpoint
+    CAMERA_ENDPOINT = "http://192.168.4.1/capture"
+
+    # Fetch the JPEG image from the ESP32 camera
+    response = requests.get(CAMERA_ENDPOINT)
+
+    # Check if the request was successful
+    if response.status_code == 200:
+        # Convert the image bytes to a numpy array
+        image_np_array = np.frombuffer(response.content, dtype=np.uint8)
+
+        # Decode the numpy array into an image
+        image = cv2.imdecode(image_np_array, cv2.IMREAD_COLOR)
+
+        # Display the image
+        cv2.imshow('ESP32 Camera Frame', image)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+    else:
+        print(f"Failed to retrieve image. HTTP Response Code: {response.status_code}")
+    ```
+
+    The script above does the following:
+
+    - Sends a GET request to the `/capture` endpoint of the ESP32 camera.
+    - If successful (HTTP status code 200), it converts the JPEG byte data into a numpy array.
+    - Using OpenCV, the numpy array is then decoded into an actual image, which can be displayed or processed further.
+
+3. **Streaming Frames**:
+
+    To continuously fetch and display frames (essentially streaming the video feed), you can place the request and image processing code inside a loop. You might also want to include error-handling mechanisms to handle scenarios where a frame might not be fetched successfully.
+
+    ```python
+    while True:
+        response = requests.get(CAMERA_ENDPOINT)
+
+        if response.status_code == 200:
+            image_np_array = np.frombuffer(response.content, dtype=np.uint8)
+            image = cv2.imdecode(image_np_array, cv2.IMREAD_COLOR)
+
+            cv2.imshow('ESP32 Camera Stream', image)
+
+            # Break the loop if 'q' key is pressed
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                break
+        else:
+            print(f"Failed to retrieve image. HTTP Response Code: {response.status_code}")
+
+    cv2.destroyAllWindows()
+    ```
+
+    This script continuously requests frames and displays them, giving the appearance of streaming. Pressing the `q` key will stop the streaming and close the display window.
+
+
+
 ## Conclusion
 
 You've now established a connection between the ESP32 camera and Python to visualize the streaming data using Napari. Explore more, adapt, and expand based on your needs!
