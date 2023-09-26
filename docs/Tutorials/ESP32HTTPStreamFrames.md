@@ -8,6 +8,7 @@ Stream frames from your ESP32 Camera using WiFi and process them in Python to vi
 
 The ESP32 camera offers both a connection to available networks and the ability to create its own access point. With the aid of a web server, we can seamlessly interact with it using HTTP requests from various platforms, including Python. This tutorial walks you through the process of streaming video from the ESP32 Camera and visualizing it using Napari.
 
+
 ## Prerequisites
 
 ### Hardware:
@@ -59,11 +60,22 @@ or
 pip install git+https://github.com/Matchboxscope/omniscope-viewer/
 ```
 
-Now, install the required Python libraries:
+### Walkthrough Napari Plugin
 
-```bash
-pip install requests numpy opencv-python napari
-```
+Steps to start the viewer:
+
+- Start Napari
+- Connect to the ESPressoscope using the Wifi/Accesspoint
+- Open the "omniscope-viewer" plugin
+- select the `omniscope` (this is designed for a multicamera view, but the ESPressoscope works equally well)
+- Wait until the device is discovered (Napari becomes inresponssive for a few seconds)
+- Start stream
+- Done :)
+
+![](IMAGES/walkthrough_napari.gif)
+
+
+### Basic concept
 
 The below snippet visualizes the idea of how python retrieves the frames:
 
