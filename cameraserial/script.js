@@ -74,18 +74,24 @@ function reshapeTo2D(array1D, width, height) {
   
 
 function base64ToImage(base64String, width, height) {
-    // Convert base64 string to byte array
-    const byteCharacters = atob(base64String);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-        byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    // Convert byte array to image
-  
+    try {
+        // Convert base64 string to byte array
+        const byteCharacters = atob(base64String);
+        const byteNumbers = new Array(byteCharacters.length);
+        for (let i = 0; i < byteCharacters.length; i++) {
+            byteNumbers[i] = byteCharacters.charCodeAt(i);
+        }
+        const byteArray = new Uint8Array(byteNumbers);
 
-    return byteArray;
+        // Return the byte array or do further processing here
+        return byteArray;
+    } catch (error) {
+        // Handle the error gracefully, e.g., by logging or returning a default value
+        console.error("Error decoding base64 string:", error);
+        return null; // You can return a default value or null in case of an error
+    }
 }
+
 
 async function readFromDevice(device, width, height, timeout = 2000) {
     const length = calculateBase64Length(width, height);
