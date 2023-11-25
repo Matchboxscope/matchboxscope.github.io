@@ -5,8 +5,9 @@ Created on Thu Jun 22 22:00:20 2023
 
 @author: bene
 """
-
-
+import os
+import os
+import tifffile as tiff
 import numpy as np
 import matplotlib.pyplot as plt
 import NanoImagingPack as nip
@@ -31,11 +32,23 @@ def reconstruct_inline_hologram(hologram, wavelength, ps, distance):
      return Ef
 
 
-imgHolo = plt.imread('/Users/bene/Downloads/ecoli.jpeg')
+#imgHolo = plt.imread('/Users/bene/Downloads/ecoli.jpeg')
+# get current working directory of this script
+
+currentFileFolder = os.path.dirname(os.path.abspath(__file__))
+fileName = '2023_11_14-Holo_Laser_USAF_2.jpg'
+imgHolo = plt.imread(os.path.join(currentFileFolder, fileName))
 imgHolo = imgHolo/nip.gaussf(imgHolo, 25)
 
-for iz in np.linspace(1,10,50):
-    img=reconstruct_inline_hologram(imgHolo[:,:,2], wavelength=450e-9, ps=5e-6 , distance=iz*1e-3)
-    plt.imshow(np.abs(img), cmap='gray'), plt.title("dz"+str(iz*1e-3))
-    plt.savefig("ecoliDefocusEsp32"+str(iz)+".png")
-    plt.show()
+lambda0 = 650e-9
+
+
+for iz in np.linspace(1,100,50):
+     print(iz)
+     img=reconstruct_inline_hologram(imgHolo[:,:,2], wavelength=lambda0, ps=5e-6 , distance=iz*1e-3)
+     if 0:
+          plt.imshow(np.abs(img), cmap='gray'), plt.title("dz"+str(iz*1e-3))
+          plt.savefig("ecoliDefocusEsp32"+str(iz)+".png")
+          # plt.show()
+     else:
+          tiff.imwrite(fileName.split('jpg')[0]+"tif", np.abs(img), append=True)

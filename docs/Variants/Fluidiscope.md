@@ -194,9 +194,67 @@ And all mounted together:
 **Done!!!**
 
 
+## ESP32 Xiao-based Planktoscope Mini
+
+This is a newer version of the Planktoscope Mini that uses the Seeed Studio Xiao Camera module. The benefit: We don't need a secondary PCB to control the Motor since we have more available GPIO pins! Yay!
+
+### Showcase
+![](./IMAGES/fluidicscope/FlowImaging.gif)
+
+### Assembly
+
+
+![](./IMAGES/fluidicscope/Planktoscope_2.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_1.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_3.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_4.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_5.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_6.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_7.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_8.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_9.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_10.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_11.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_12.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_13.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_14.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_15.jpg)
+
+![](./IMAGES/fluidicscope/Planktoscope_16.jpg)
+
+### Printed Parts
+
+### BOM
+
+- 2mm Silicone Tube with high flexibility
+- 28byj-48 + ULN2003 driver
+- Wires
+- DIN912 Screws
+- Springs
+- Seeed Studio Xiao Sense
+- Microfluidic chip 
 
 
 
-# Software
+### Software
 
-More to come here?
+The Anglerfish Software here: https://github.com/Matchboxscope/matchboxscope-simplecamera/tree/matchboxscope has the abbility to control the stepper driver via the ULN2003.
+
+More information here:
+https://github.com/Matchboxscope/matchboxscope-simplecamera/blob/matchboxscope/main/main.ino#L33
+and here:
+https://github.com/Matchboxscope/matchboxscope-simplecamera/blob/matchboxscope/main/camera_pins.h#L90

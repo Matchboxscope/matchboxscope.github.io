@@ -98,13 +98,20 @@ async function readFromDevice(device, width, height, timeout = 2000) {
     timeoutId = setTimeout(() => reject(new Error("Read timeout")), timeout);
   });
 
+  const timeNow = Date.now();
   try {
+
     while (accumulatedData.length < length) {
       const result = await Promise.race([reader.read(), timeoutPromise]);
+      const data = new TextDecoder().decode(result.value);
+      if (Date.now() - timeNow > 1000) {
+        console.log("Timeout");
+        break;
+      }
       clearTimeout(timeoutId); // Clear the timeout every successful read
-
+        console.log(data);
       // Append the newly read data to the accumulated data
-      accumulatedData += new TextDecoder().decode(result.value);
+      accumulatedData += data
     }
 
     reader.releaseLock();
