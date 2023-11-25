@@ -238,6 +238,8 @@ This is a newer version of the Planktoscope Mini that uses the Seeed Studio Xiao
 
 ### Printed Parts
 
+All files can be found in the release here: https://github.com/Matchboxscope/Matchboxscope/releases/tag/PlanktoscopeMini
+
 ### BOM
 
 - 2mm Silicone Tube with high flexibility
@@ -246,7 +248,7 @@ This is a newer version of the Planktoscope Mini that uses the Seeed Studio Xiao
 - DIN912 Screws
 - Springs
 - Seeed Studio Xiao Sense
-- Microfluidic chip 
+- Microfluidic chip
 
 
 
