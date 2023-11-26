@@ -76,7 +76,8 @@ for iz in np.linspace(1,10,50):
 
 ## Reults
 
-![](IMAGES/2023_11_14-Holo_Laser_USAF-1.gif)
+![](IMAGES/holoscope/git
+  2023_11_14-Holo_Laser_USAF-1.gif)
 
 ![](IMAGES/holoscope/ESP32_HoloReconstruction.gif)
 
