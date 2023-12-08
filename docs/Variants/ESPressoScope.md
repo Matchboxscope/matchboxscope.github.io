@@ -4,6 +4,10 @@
 
 This is the latest version of the base assembly for any ESP32-based microscope.
 
+:::warning
+It is always advisable to first flash the software and then build the microscope around it.
+:::
+
 ## Improvements
 This device is a work-in-progress instrument. Not everything is perfectly working yet. Bare with us. If you find something sneaky, please feel free to file an issue or start a discussion here: https://github.com/matchboxscope/Matchboxscope
 
@@ -106,7 +110,7 @@ https://github.com/Matchboxscope/Matchboxscope/releases/tag/XIAOSeeedStudioV1
 
 ![](IMAGES/injectionmold/seeedvariation_1.jpg)
 
-3. Add the lid and short M3 screws to close it. Done. 
+3. Add the lid and short M3 screws to close it. Done.
 ![](IMAGES/injectionmold/seeedvariation_4.jpg)
 
 

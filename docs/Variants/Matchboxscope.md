@@ -8,6 +8,9 @@
 ***QuickStart*** The current CAD files can conveniently be downloaded from Printables: https://www.printables.com/model/412753-esp32-microscope-matchboxscope
 :::
 
+:::warning
+It is always advisable to first flash the software and then build the microscope around it.
+:::
 
 
 This device is not much larger than a matchbox (hence its name - surprise..). Besides the ESP32-CAM it only needs 3D printed components, screws, aluminum foil, and a couple of magnets (or optional springs).
