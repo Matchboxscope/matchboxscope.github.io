@@ -85,6 +85,10 @@ The in1-4 pins on the ULN2003 can be 32,25,22,27 as stated below.
 The "analogIn" was chosen to be 4.
 
 
+:::INFO
+We have implemented the stepper code in the XIAO firmware as well. Please have a look here https://github.com/Matchboxscope/matchboxscope-simplecamera/tree/matchboxscope and watch out for the accelstepper code. File an issue if you need more information
+:::
+
 In code:
 
 ```cpp
@@ -175,6 +179,20 @@ Put it close together, organize the wires and tubes
 Add the tube and make sure the wires are leaving the assembly like this:
 
 ![Start](IMAGES/fluidicscope/fluidiscope_9.jpg)
+
+
+## Determination of the Flowrate
+
+```python
+# this is to compute the mean and stdv of the flow-reate of the low-cost pump
+# measured by weighing the water that was pumped at 1000 steps/s
+import numpy as np
+mArray = np.array((860, 940, 850)) # ml/min
+print(f"Flowrate: %f +/-  %f ml/min", np.mean(mArray), np.std(mArray))
+#Flowrate: %f +/-  %f ml/min 883.3333333333334 40.2768199119819
+```
+
+![](./IMAGES/fluidicscope/measureflowrate.jpeg)
 
 ### Some thoughts on the Ikea Lamp
 
