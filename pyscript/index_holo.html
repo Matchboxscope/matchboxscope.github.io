@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<script defer src="pyscript.js"></script>
+<py-env>
+    - matplotlib
+    - imageio
+    - numpy
+    - scipy
+</py-env>
+<div class="p-4 m-auto mt-6 mb-8 bg-red-100 border-2 justify-items-center">
+    <label for="File Upload">Upload the image and Reconstruct it as a Hologram (Source: https://jeff.glass/post/pyscript-image-upload/) </label>
+    <br><input type="file" id="file-upload-pillow">
+    <div id="output_upload_pillow"></div>
+</div>
+<py-script src="image_upload_pillow.py"></py-script>
+</div>
+</div>
+</body>
+</html>
