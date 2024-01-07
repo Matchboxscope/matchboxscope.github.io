@@ -66,7 +66,7 @@ const config = {
           },
           {to: '/blog', label: 'Software', position: 'left'},
           {
-            href: 'https://github.com/matchboxscope/',
+            href: 'https://github.com/matchboxscope/matchboxscope.github.io',
             label: 'GitHub',
             position: 'right',
           },
@@ -136,7 +136,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/matchboxscope/',
+                href: 'https://github.com/matchboxscope/matchboxscope.github.io',
               },
             ],
           },

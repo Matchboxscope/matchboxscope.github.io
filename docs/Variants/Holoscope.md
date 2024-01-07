@@ -30,6 +30,18 @@ The release files can be found https://github.com/Matchboxscope/Matchboxscope/re
 
 ## Reconstruction code:
 
+
+### Online-based Pyscript 
+
+Please visit the following website and upload your hologram: https://matchboxscope.github.io/pyscript/index_holo.html
+The data won't leave your computer. Everything is implemented in pyodide/pyscript. The source code can be found here https://github.com/Matchboxscope/matchboxscope.github.io/blob/main/static/pyscript/image_upload_pillow.py
+
+As of now: The reconstruction distance is constant as I don't know how to make this a parameter. 
+
+
+
+### Python
+
 ```py
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
