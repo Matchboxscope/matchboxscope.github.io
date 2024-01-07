@@ -232,6 +232,83 @@ The Litium Ion battery will be connected to the TP5400 input (B+/B-)
 
 Make sure you do not create a shortcut! => Place everything in plastic bag.
 
+## Electronics
+
+You would need to change the settings in this file and compile the code accordingly: https://github.com/Matchboxscope/matchboxscope-simplecamera/blob/matchboxscope/main/camera_pins.h
+
+### Wired Version (Anglerfish)
+
+| Definition                  | Pin     |
+|-----------------------------|---------|
+| ACCELSTEPPER                | 1       |
+| STEPPER_MOTOR_DIR           | D2      |
+| STEPPER_MOTOR_STEP          | D1      |
+| STEPPER_MOTOR_ENABLE        | D0      |
+| STEPPER_MOTOR_M1            | -1      |
+| STEPPER_MOTOR_M2            | -1      |
+| STEPPER_MOTOR_M3            | -1      |
+| STEPPER_MOTOR_NOTRESET      | -1      |
+| STEPPER_MOTOR_NOTSLEEP      | -1      |
+| NUMPIXELS                   | 16      |
+| NEOPIXEL_PIN                | D6      |
+
+### Standard Configuration
+| Definition                  | Pin     |
+|-----------------------------|---------|
+| STEPPER                     | 1       |
+| motorPin1                   | D7      |
+| motorPin2                   | D8      |
+| motorPin3                   | D9      |
+| motorPin4                   | D10     |
+| NUMPIXELS                   | 16      |
+| NEOPIXEL_PIN                | D6      |
+| STEPPER_MOTOR               | -       |
+| STEPPER_MOTOR_STEPS         | 200     |
+| STEPPER_MOTOR_SPEED         | 20000   |
+
+### Alternate Configuration
+| Definition                  | Pin     |
+|-----------------------------|---------|
+| NUMPIXELS                   | 16      |
+| NEOPIXEL_PIN                | D9      |
+| STEPPER_MOTOR_DIR           | D7      |
+| STEPPER_MOTOR_STEP          | D0      |
+| STEPPER_MOTOR_ENABLE        | D6      |
+| STEPPER_MOTOR_M1            | -1      |
+| STEPPER_MOTOR_M2            | -1      |
+| STEPPER_MOTOR_M3            | -1      |
+| STEPPER_MOTOR_NOTRESET      | D2      |
+| STEPPER_MOTOR_NOTSLEEP      | D1      |
+| STEPPER_MOTOR               | -       |
+| STEPPER_MOTOR_STEPS         | 200     |
+| STEPPER_MOTOR_SPEED         | 20000   |
+
+### Board Version
+| Definition                  | Pin     |
+|-----------------------------|---------|
+| STEPPER_MOTOR_DIR           | D8      |
+| STEPPER_MOTOR_STEP          | D7      |
+| STEPPER_MOTOR_ENABLE        | D9      |
+| STEPPER_MOTOR_M1            | -1      |
+| STEPPER_MOTOR_M2            | -1      |
+| STEPPER_MOTOR_M3            | -1      |
+| STEPPER_MOTOR_NOTRESET      | -1      |
+| STEPPER_MOTOR_NOTSLEEP      | -1      |
+| NUMPIXELS                   | 16      |
+| NEOPIXEL_PIN                | -0      |
+
+### Solder-less Version
+| Definition                  | Pin     |
+|-----------------------------|---------|
+| en                          | D6      |
+| m1                          | D5      |
+| m2                          | D4      |
+| m3                          | D3      |
+| notreset                    | D2      |
+| notsleep                    | D1      |
+| stp                         | D0      |
+| dir                         | D7      |
+
 
 ### Microscope in the bottle => focus!
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Normalizer</title>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+</head>
+<body>
+
+    <py-env>
+    - numpy
+    - pillow
+    </py-env>
+
+    <h1>Image Normalizer</h1>
+    <input type="file" accept="image/*" onchange="loadFile(event)">
+    <br><br>
+    <img id="output" style="max-width: 500px;"/>
+    
+    <py-script>
+        import numpy as np
+        from PIL import Image
+        from io import BytesIO
+        import base64
+
+        def normalize_and_display(image_data):
+            # Convert input data to an image
+            image = Image.open(BytesIO(image_data))
+            # Convert image to NumPy array
+            img_array = np.asarray(image)
+            # Normalize the image
+            normalized_array = img_array / 255.0
+            # Convert normalized array back to image
+            normalized_image = Image.fromarray((normalized_array * 255).astype('uint8'))
+            # Convert image to base64 to display on webpage
+            buffered = BytesIO()
+            normalized_image.save(buffered, format="PNG")
+            img_base64 = base64.b64encode(buffered.getvalue()).decode()
+            document.getElementById('output').src = f"data:image/png;base64,{img_base64}"
+
+        def loadFile(event):
+            file = event.target.files[0]
+            reader = FileReader()
+            reader.onload = lambda e: normalize_and_display(e.target.result)
+            reader.readAsArrayBuffer(file)
+    </py-script>
+
+</body>
+</html>
