@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Matchboxscope Documentation',
-  tagline: 'The smallest and cheapest microscope you can find!',
-  url: 'https://matchboxscope.github.io',
+  title: 'openSIMMO Documentation',
+  tagline: 'A low-cost, open-source implementation of DMD-based multi-colour SIM',
+  url: 'https://opensimmo.github.io',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Matchboxscope', // Usually your GitHub org/user name.
-  projectName: 'Matchboxscope Documentation', // Usually your repo name.
+  organizationName: 'openSIMMO', // Usually your GitHub org/user name.
+  projectName: 'openSIMMO Documentation', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -52,10 +52,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Matchboxscope Documentation',
+        title: 'openSIMMO Documentation',
         logo: {
           alt: 'openUC2 Logo',
-          src: 'img/Artboard4@4x.png',
+          src: 'img/opensimmologo.png',
         },
         items: [
           {
@@ -66,7 +66,7 @@ const config = {
           },
           {to: '/blog', label: 'Software', position: 'left'},
           {
-            href: 'https://github.com/matchboxscope/matchboxscope.github.io',
+            href: 'https://github.com/openSIMMO/openSIMMO.github.io',
             label: 'GitHub',
             position: 'right',
           },
@@ -136,12 +136,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/matchboxscope/matchboxscope.github.io',
+                href: 'https://github.com/openSIMMO/openSIMMO.github.io',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Matchboxscope Developers.`,
+        copyright: `Copyright © ${new Date().getFullYear()} openSIMMO Developers.`,
       },
       prism: {
         theme: lightCodeTheme,

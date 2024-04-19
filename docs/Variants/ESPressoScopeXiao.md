@@ -1,36 +1,33 @@
-# ESPressoscope (Injection Molded Version of the Matchboxscope)
+# ESPressoscope (Seeed Studio Xiao)
 
 *A Cup-sized microscope that never sleeps.*
 
 This is the latest version of the base assembly for any ESP32-based microscope.
 
 :::warning
-It is always advisable to first flash the software and then build the microscope around it.
+It is always advisable to first flash the software and then build the microscope around it. Please go here to flash the latest version: https://matchboxscope.github.io/firmware/FLASH.html
 :::
+
+
+Instead of the ESP32-CAM, we can also use the newer ESP32-S3-based camera from Seeed Studio. It's a lot smaller and more powerful. But beware: It gets hot! Plastic may start melting. For this board, choose the XIAO firmware in the flashing process.
+
+These are the parts needed; You can retrieve them from here:
+https://github.com/Matchboxscope/Matchboxscope/releases/tag/XIAOSeeedStudioV1
+![](IMAGES/injectionmold/xiaovariation.jpeg)
+
+
 
 ## Improvements
 This device is a work-in-progress instrument. Not everything is perfectly working yet. Bare with us. If you find something sneaky, please feel free to file an issue or start a discussion here: https://github.com/matchboxscope/Matchboxscope
 
-**Known Issues:**
-- Hole for led holder larger
-- Do we really want threaded inserts?
-- Case of ESP32 may be pushing the boot/reset button causing issues while turning on?
-
-**Improvements:**
-- removing threaded inserts saves a hot iron, but removes smooth operation while focussing
-- one of the insert holes is a little off, does not have enough printing material/support
-- make hole round assembly larger in diameter to have moroe support for the threaded inserts?
-- diffuser for the led
-
-
 :::info
 The newest **3D Printing files** can be found in the ESPressoscope release here:
-https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2
+https://github.com/Matchboxscope/Matchboxscope/releases/
 :::
 
 ## Flash the firmware
 
-Please visit the following explanation [Firmware](Firmware.md)
+Please visit the following explanation [Firmware](https://matchboxscope.github.io/firmware/FLASH.html)
 
 
 ## Assembly
@@ -43,7 +40,7 @@ These are the parts you need to build a Matchboxscope:
 
 | Name                                       | Description                           | Amount | Price (USD) | URL                                                                                              |
 |--------------------------------------------|---------------------------------------|--------|-------------|--------------------------------------------------------------------------------------------------|
-| ESP32-Camera board + USB Serial adapter    | ESP32 Camera Board with USB Serial    | 1      | $20         | [Link](https://www.amazon.de/ESP32-CAM-MB-Kameramodul-Bluetooth-Entwicklungsplatine-serielle-automatischer-1-St%C3%BCck/dp/B0BW8R64G2/ref=asc_df_B0BW8R64G2/?tag=googshopde-21&linkCode=df0&hvadid=650906361097&hvpos=&hvnetw=g&hvrand=1218942929036455298&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9044063&hvtargid=pla-2022052345436&psc=1&th=1&psc=1&gclid=CjwKCAjw_aemBhBLEiwAT98FMqvqt9tAKJwjN-7spPI5fVI1voVxfh5AhyYn2LXKl_vBqAfgKlxVlBoCHo8QAvD_BwE)                                                                  |
+| ESP32-Xiao Seed Studio |  ESP32 Camera Board with USB Serial    | 1      | $13         | [Link](https://www.seeedstudio.com/XIAO-ESP32S3-Sense-p-5639.html)                                                                  |
 | Lid/bottom (printed)                       | 3D Printed Lid/bottom                 | 2      | $2 (each)   | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
 | Base (printed)                             | 3D Printed Base                       | 2      | $2 (each)   | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
 | Camera holder (printed)                    | 3D Printed Camera holder              | 1      | $3          | [Link](https://github.com/Matchboxscope/Matchboxscope/releases/tag/v2)                                                                  |
@@ -62,85 +59,88 @@ These are the parts you need to build a Matchboxscope:
 ***WARNING:*** It is advisable to have the USB cable disconnected from the camera board. This way the USB connector won't rip off the PCB and you won't induce any electro static discharges which may ultimatively destroy the board
 :::
 
-1. Add the threaded inserts to the base using a hot iron - don't burn yourself! Hint: You can have 3 inserts on the top and three on the bottom. A hot iron with a fine tip is better than one with a flat one. (**HINT:** This mechanism may change back to a non-threaded insert based version for better operatibility)
-![](IMAGES/injectionmold/matchboxscope_injectionmolding3.jpg)
+### Prepare the Camera
 
-2. Repeat this for all 6 slots (or 5 if you only use 2 on the bottom)
-![](IMAGES/injectionmold/matchboxscope_injectionmolding1.jpg)
+Unpack the camera from the plastic pouch:
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_3.jpg)
 
-3. Remove the lens from the camera module using pliers
-![](IMAGES/injectionmold/matchboxscope_injectionmolding4.jpg)
+
+Add the Wifi Antenna to the board by clicking it together:
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_4.jpg)
+
+Fold the Wifi antenna for better signal strength:
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_5.jpg)
+
+
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_9.jpg)
+
+Now remove the camera from the camera board, This can be done by flipping the brown bar and removing the copper pcb. Be careful to not destroy the flexible PCB!
+
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_1.jpg)
 
 **HINT/Warning:** Be careful while removing the lens. The flex cable is sensitive to tension. It may be easier to first remove the camera module using the snap-bar mechanism and then later add it again.
 ![](IMAGES/injectionmold/VID_20230504_104920.gif)
 
-4. Add the lens to the holder and remove the sticky tape (**Note**: This part looks a little different now since the screw has to move closer to the base board); **Hint:** The distance between the camera lens and the sensor determines the magnification, the further out the lens lurkes, the higher the magnification. You can tune it freely. **Hint :** Remove any sticker that may remain on the camera lens.
+
+Removing the lens is easiest by tacking pliers and grib the lens. Then carefully unscrew it. There might be some glue, so that it may be a little tricky to untighten it. Be careful to not destroy the flexible PCB!
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_6.jpg)
+
+Now, you can insert the lens into the lens holder by pressfitting it. The small aperture has to point asway from the little wings:
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_7.jpg)
+
+Add the lens to the holder and remove the sticky tape (**Note**: This part looks a little different now since the screw has to move closer to the base board); **Hint:** The distance between the camera lens and the sensor determines the magnification, the further out the lens lurkes, the higher the magnification. You can tune it freely. **Hint :** Remove any sticker that may remain on the camera lens.
 ![](IMAGES/injectionmold/IMG_20230519_122130.jpg)
 
 **HINT:** In Motion:
 ![](IMAGES/injectionmold/VID_20230504_105826.gif)
 
-5. Fix the lens on the base using M3x6mm screws (**Note**: The screws should not touch the PCB later when everything is fully assembled! Therefore, please use short screws. )
-![](IMAGES/injectionmold/matchboxscope_injectionmolding12.jpg)
-
-6. Add the camera holder to the board and fix the camera in place (**Hint**: If the Camera is not holding properly, you could use blutek or double sided sticky tape to fix it temporally. **WARNING:** be careful with the flex-pcb (copper one) since this easily breaks if not handled with care); Make sure the flatband cable is oriented correctly and the camera sensor (round, shingy side) points to the SD card slot as indicated in the image below. Make sure you have a good mechanical connection between the flat-band cable and the snap-bar-like mechanism of the ESP-CAM board. Carefuly pull the connection and see if it won't go off.
-![](IMAGES/injectionmold/matchboxscope_injectionmolding14.jpg)
-
-7. Add the ESP32 board to the base so that the camera tube fits into the hole in the base
-![](IMAGES/injectionmold/matchboxscope_injectionmolding15.jpg)
-
-8. Close the base with the lid from below using M3x12mm screws (not using too long screws); **HINT:** Make sure the lid(s) are oriented such that the screw holes are pointing outwards as indicated in the image below:
-![](IMAGES/injectionmold/matchboxscope_injectionmolding16.jpg)
-
-### Variation: Seeed Studio Xiao Camera
-
-Instead of the ESP32-CAM, we can also use the newer ESP32-S3-based camera from Seeed Studio. It's a lot smaller and more powerful. But beware: It gets hot! Plastic may start melting. For this board, choose the XIAO firmware in the flashing process.
-
-These are the parts needed; You can retrieve them from here:
-https://github.com/Matchboxscope/Matchboxscope/releases/tag/XIAOSeeedStudioV1
-![](IMAGES/injectionmold/xiaovariation.jpeg)
 
 
 
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_1.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_2.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_3.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_4.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_5.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_6.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_7.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_8.jpg)
-![](IMAGES/injectionmold/xiao/espressoscope_xiao_9.jpg)
+
+### Prepare the 3D printed parts
 
 
-
-*Steps to reproduce*
-
-1. Prepare the Case by adding the threaded inserts using the hot iron
+1. Add the threaded inserts to the base using a hot iron - don't burn yourself! Hint: You can have 3 inserts on the top and three on the bottom. A hot iron with a fine tip is better than one with a flat one. (**HINT:** This mechanism may change back to a non-threaded insert based version for better operatibility - this step looks a bit different since the base is a little different, but the idea is the same.)
 
 ![](IMAGES/injectionmold/seeedvariation_3.jpg)
+
 
 2. Add the Xiao to the base after removing the lens from the camera. Make sure the camera is parallel to the surface; An SD card (dummy) may help
 
 ![](IMAGES/injectionmold/seeedvariation_1.jpg)
 
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_8.jpg)
+
+3.1
+
+
+Fix the lens on the base using M3x6mm screws (**Note**: The screws should not touch the PCB later when everything is fully assembled! Therefore, please use short screws. This looks different, but the core idea is the same)
+
+![](IMAGES/injectionmold/matchboxscope_injectionmolding12.jpg)
+
+
 3. Add the lid and short M3 screws to close it. Done.
+
 ![](IMAGES/injectionmold/seeedvariation_4.jpg)
 
+4. Add the springs to the screws and mount the sample plate using M3x24mm screws;  Add the lamp holder using the M3x12 screw.
 
-9. Add the springs to the screws and mount the sample plate using M3x24mm screws;  Add the lamp holder using the M3x12 screw.
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding17.jpg)
 
 **HINT:** This is a bit tricky. Start with one screw+spring combination, fix it and continue with all others. In motion:
+
 ![](IMAGES/injectionmold/VID_20230504_111346.gif)
 
-10. Add the lamp - done!
+5. Add the lamp - done!
+
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding18.jpg)
 
 
 ## Done
 
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding19.jpg)
+
 
 ## Operation
 
