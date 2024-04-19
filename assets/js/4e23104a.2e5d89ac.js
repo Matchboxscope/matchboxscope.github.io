@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkMatchboxscope=self.webpackChunkMatchboxscope||[]).push([[1428],{4588:a=>{a.exports=JSON.parse('{"label":"Holography","permalink":"/blog/tags/holography","allTagsPath":"/blog/tags","count":1}')}}]);

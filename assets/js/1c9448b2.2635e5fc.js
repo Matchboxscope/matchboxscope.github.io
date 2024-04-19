@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkMatchboxscope=self.webpackChunkMatchboxscope||[]).push([[1348],{6792:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);
