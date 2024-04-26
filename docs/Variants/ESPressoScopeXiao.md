@@ -32,9 +32,9 @@ Please visit the following explanation [Firmware](https://matchboxscope.github.i
 
 ## Assembly
 
-These are the parts you need to build a Matchboxscope:
+These are the parts you need to build a Matchboxscope (**the sample plate is missing in the following image**):
 
-![](IMAGES/injectionmold/matchboxscope_injectionmolding2.jpg)
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_12.png)
 
 
 
@@ -88,6 +88,7 @@ Removing the lens is easiest by tacking pliers and grib the lens. Then carefully
 Now, you can insert the lens into the lens holder by pressfitting it. The small aperture has to point asway from the little wings:
 ![](IMAGES/injectionmold/xiao/espressoscope_xiao_7.jpg)
 
+
 Add the lens to the holder and remove the sticky tape (**Note**: This part looks a little different now since the screw has to move closer to the base board); **Hint:** The distance between the camera lens and the sensor determines the magnification, the further out the lens lurkes, the higher the magnification. You can tune it freely. **Hint :** Remove any sticker that may remain on the camera lens.
 ![](IMAGES/injectionmold/IMG_20230519_122130.jpg)
 
@@ -123,6 +124,11 @@ Fix the lens on the base using M3x6mm screws (**Note**: The screws should not to
 3. Add the lid and short M3 screws to close it. Done.
 
 ![](IMAGES/injectionmold/seeedvariation_4.jpg)
+
+Use screws that are not too long:
+![](IMAGES/injectionmold/xiao/espressoscope_xiao_13.png)
+
+
 
 4. Add the springs to the screws and mount the sample plate using M3x24mm screws;  Add the lamp holder using the M3x12 screw.
 
