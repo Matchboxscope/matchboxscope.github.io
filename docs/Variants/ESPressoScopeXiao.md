@@ -29,6 +29,15 @@ https://github.com/Matchboxscope/Matchboxscope/releases/
 
 Please visit the following explanation [Firmware](https://matchboxscope.github.io/firmware/FLASH.html)
 
+### An in-depth video to flash the firmware and access the device
+
+- Flash the firmware
+- Go to the console and check the Wifi Address (e.g. Matchbxoscope-XXXXX where XXX is the Macaddress)
+- Connect to this Wifi network using your computer
+- Access the url in your browser: http://192.168.4.1
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Tw1_9M5Cn_A?si=KlRghhoy4_Hs7jVO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Assembly
 
@@ -132,13 +141,23 @@ Use screws that are not too long:
 
 4. Add the springs to the screws and mount the sample plate using M3x24mm screws;  Add the lamp holder using the M3x12 screw.
 
-![](IMAGES/injectionmold/matchboxscope_injectionmolding17.jpg)
+
+5. Add the lamp
 
 **HINT:** This is a bit tricky. Start with one screw+spring combination, fix it and continue with all others. In motion:
 
 ![](IMAGES/injectionmold/VID_20230504_111346.gif)
 
-5. Add the lamp - done!
+
+Prepare the illumination part:
+![](IMAGES/injectionmold/xiao/IMG_20240430_192811.jpg)
+
+..and mount the light on the stage
+![](IMAGES/injectionmold/xiao/IMG_20240430_192957.jpg)
+
+
+
+6. Done!
 
 ![](IMAGES/injectionmold/matchboxscope_injectionmolding18.jpg)
 
