@@ -4,6 +4,8 @@
 
 ![](./IMAGES/Espressoscope-v1-02.jpg)
 
+[![DOI](https://zenodo.org/badge/798846669.svg)](https://zenodo.org/doi/10.5281/zenodo.11179310)
+
 Microscopy has long been an indispensable tool for exploring the hidden intricacies of the microcosm, enabling scientists to investigate, identify, and measure objects at the microscopic scale. However, the accessibility and operational capabilities of modern microscopy equipment have often been hindered by exorbitant costs, limited availability of components, and challenges associated with transportation, particularly in remote or resource-limited settings. To address these challenges, we introduce ESPressoscope, an innovative approach that leverages the power of a $5 open-source microcontroller board, the ESP32-CAM. This platform not only serves as a portable and field-ready digital microscope but also stands as a versatile foundation for a diverse array of imaging applications.
 
 # Enabling Versatility Through a simple and low-cost Microscope
