@@ -4,7 +4,7 @@
         <title>Matchboxscope Documentation Blog</title>
         <link>https://matchboxscope.github.io/blog</link>
         <description>Matchboxscope Documentation Blog</description>
-        <lastBuildDate>Fri, 17 May 2024 20:21:59 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 09 Aug 2024 11:10:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[Reconstruct the Hologram]]></title>
             <link>https://matchboxscope.github.io/blog/ReconHolo</link>
             <guid>https://matchboxscope.github.io/blog/ReconHolo</guid>
-            <pubDate>Fri, 17 May 2024 20:21:59 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 11:10:05 GMT</pubDate>
             <description><![CDATA[You can also visit this site//matchboxscope.github.io/pyscript/index_holo.html]]></description>
             <content:encoded><![CDATA[<p>You can also visit this site: <a href="https://matchboxscope.github.io/pyscript/index_holo.html" target="_blank" rel="noopener noreferrer">https://matchboxscope.github.io/pyscript/index_holo.html</a></p><p>Wait a moment until pyscript loads and then upload your ESPHolo file:</p><iframe src="https://matchboxscope.github.io/pyscript/index_holo.html" width="100%" height="100%"></iframe><p>The parameters are:</p><div class="language-py codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-py codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">my_image_recon</span><span class="token operator" style="color:#393A34">=</span><span class="token plain">reconstruct_inline_hologram</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">my_image</span><span class="token punctuation" style="color:#393A34">[</span><span class="token punctuation" style="color:#393A34">:</span><span class="token punctuation" style="color:#393A34">,</span><span class="token punctuation" style="color:#393A34">:</span><span class="token punctuation" style="color:#393A34">,</span><span class="token number" style="color:#36acaa">2</span><span class="token punctuation" style="color:#393A34">]</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> wavelength</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">450e-9</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> ps</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">5e-6</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> distance</span><span class="token operator" style="color:#393A34">=</span><span class="token number" style="color:#36acaa">.007</span><span class="token punctuation" style="color:#393A34">)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p><em>Alternatively:</em> Please visit the following website and upload your hologram: <a href="https://matchboxscope.github.io/pyscript/index_holo.html" target="_blank" rel="noopener noreferrer">https://matchboxscope.github.io/pyscript/index_holo.html</a></p><p>The data won't leave your computer. Everything is implemented in pyodide/pyscript. The source code can be found here <a href="https://github.com/Matchboxscope/matchboxscope.github.io/blob/main/static/pyscript/image_upload_pillow.py" target="_blank" rel="noopener noreferrer">https://github.com/Matchboxscope/matchboxscope.github.io/blob/main/static/pyscript/image_upload_pillow.py</a></p><p>As of now: The reconstruction distance is constant as I don't know how to make this a parameter.</p>]]></content:encoded>
             <category>ESP32-CAM</category>
@@ -22,7 +22,7 @@
             <title><![CDATA[Using the ESP32 Camera in the Browser]]></title>
             <link>https://matchboxscope.github.io/blog/SerialCamera</link>
             <guid>https://matchboxscope.github.io/blog/SerialCamera</guid>
-            <pubDate>Fri, 17 May 2024 20:21:59 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 11:10:05 GMT</pubDate>
             <description><![CDATA[Here you can use the ESP32 camera in the browser]]></description>
             <content:encoded><![CDATA[<p>Here you can use the ESP32 camera in the browser</p><iframe src="https://matchboxscope.github.io/cameraserial/index.html" width="100%" height="100%"></iframe>]]></content:encoded>
             <category>ESP32-CAM</category>
@@ -33,7 +33,7 @@
             <title><![CDATA[Flashing the Firmware]]></title>
             <link>https://matchboxscope.github.io/blog/Flashing</link>
             <guid>https://matchboxscope.github.io/blog/Flashing</guid>
-            <pubDate>Fri, 17 May 2024 20:21:59 GMT</pubDate>
+            <pubDate>Fri, 09 Aug 2024 11:10:05 GMT</pubDate>
             <description><![CDATA[Here you can flash the firmware for the different hardware versions:]]></description>
             <content:encoded><![CDATA[<p>Here you can flash the firmware for the different hardware versions:</p><p><img loading="lazy" src="/assets/images/firmware-update-1-bc63551328b1746e30a52e67fb04ed55.png" width="512" height="512" class="img_ev3q"></p><p>You can also visit this site: <a href="https://matchboxscope.github.io/firmware/FLASH.html" target="_blank" rel="noopener noreferrer">https://matchboxscope.github.io/firmware/FLASH.html</a></p><iframe src="https://matchboxscope.github.io/firmware/FLASH.html" width="100%" height="100%"></iframe>]]></content:encoded>
             <category>ESP32-CAM</category>
