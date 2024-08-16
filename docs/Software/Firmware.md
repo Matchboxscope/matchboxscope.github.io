@@ -8,6 +8,7 @@ Instead of flashing the firmware - which may become tricky, especially if you ha
 you can use the **standard firmware/preflashed software** and simply connect the device to USB-power and search for the access point the device creates by default (e.g. *ESP32-XXXX* and go to http://192.168.4.1, you will see some very nice GUI :-) )
 :::
 
+This is an interesting approach from SEEEDStudio itself: https://files.seeedstudio.com/grove_ai_vision/index.html
 
 
 
