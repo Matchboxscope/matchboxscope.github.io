@@ -154,6 +154,10 @@
           <img src="static/img/c.png" alt="Xiao Sense" />
         </label>
         <label>
+          <input type="radio" name="type" value="xiao-sense-default-manifest" checked />
+          <img src="static/img/xiao.jpg" alt="Xiao Sense Default" />
+        </label>
+        <label>
           <input type="radio" name="type" value="esp32-espectrometer" checked />
           <img src="https://upload.wikimedia.org/wikipedia/commons/2/25/Spectrum-sRGB.svg" alt="ESP32 Spectrometer" />
         </label>
@@ -215,13 +219,29 @@
         </code>
       </pre>
       </div>
+      <div class="hidden info xiao-sense-default-manifest">
+        <h3>Default firmware for Xiao</h3>
+        <p>
+          This flashes the ESP32 Camera Server to the board.
+            <a href="https://github.com/limengdu/SeeedStudio-XIAO-ESP32S3-Sense-camera/blob/main/CameraWebServer/CameraWebServer.ino"> here.</a>
+            Default settings: {"ssid":"Blynk","password":"12345678"}
+        </p>
+        <h3>Pin Layout</h3>
+        <pre>
+        <code class="language-pascal">
+          // ESP32-Camera
+          const int PIN_DEF_LED = 04;
+          const int PIN_DEF_PWM = 12;
+        </code>
+      </pre>
+      </div>
       <div class="hidden info esp32-serialcamera">
         <h3>Serial Camera Interface for XIAO Sense</h3>
         <p>
           This flashes a simple firmware to the Xiao Sense ESP32S3 camera that can get diplayed using USB Serial in the browser
           The firmware can be found <a href="https://github.com/Matchboxscope/matchboxscope-simplecamera/tree/rawframereadout"> here.</a>
 
-          <h3>Visualizing Stream </h3>                
+          <h3>Visualizing Stream </h3>
             The website that you can use to connect to the camera and display the stream can be found <a href="https://matchboxscope.github.io/cameraserial/index.html"> here.</a>
         </p>
       </div>

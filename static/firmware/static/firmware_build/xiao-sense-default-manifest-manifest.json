@@ -1,0 +1,12 @@
+{
+  "name": "ESP32s3-XiaoSense",
+  "version": "2023-08-7",
+  "home_assistant_domain": "Xiao Sense",
+  "new_install_skip_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [{ "path": "xiao-sense-manifest.bin", "offset": 0 }]
+    }
+  ]
+}
