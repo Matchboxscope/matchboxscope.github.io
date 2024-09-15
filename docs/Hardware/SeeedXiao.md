@@ -59,7 +59,8 @@ You can also build you **ANGLERFISH** using cubes. Please head over to the openU
 
 The [OpenUC2 Repo](https://github.com/openUC2/openUC2-SEEED-XIAO-Camera)
 
-We are setting up the documentation on the openuc2 website, too: https://openuc2.github.io/docs/Core/Automation/seeedmicroscope
+We are setting up the documentation on the openuc2 website, too: https://openuc2.github.io/docs/Toolboxes/DiscoveryElectronics/seeedmicroscope
+
 
 ![](./IMAGES/seeed/IMG_20230718_131610.jpg)
 
